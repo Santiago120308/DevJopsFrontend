@@ -137,12 +137,11 @@ const Ofertas = () => {
                         <h3 className={'text-white uppercase font-black text-2xl mt-24'}>Resultados de la busqueda : {textoFiltro}</h3>
                     </div> : ''}
 
-                    {ofertas.length > 0 &&  ofertas?.map(oferta => (
+                    {(ofertas ?? []).length > 0 && (ofertas ?? []).map(oferta => (
                         <div key={oferta.id}>
                             <OfertaPreview oferta={oferta}/>
                         </div>
                     ))}
-
 
                 </div>
             </div>
