@@ -137,11 +137,15 @@ const Ofertas = () => {
                         <h3 className={'text-white uppercase font-black text-2xl mt-24'}>Resultados de la busqueda : {textoFiltro}</h3>
                     </div> : ''}
 
-                    {(ofertas ?? []).length > 0 && (ofertas ?? []).map(oferta => (
-                        <div key={oferta.id}>
-                            <OfertaPreview oferta={oferta}/>
-                        </div>
-                    ))}
+                    {Array.isArray(ofertas) && ofertas.length > 0 ? (
+                        ofertas.map(oferta => (
+                            <div key={oferta.id}>
+                                <OfertaPreview oferta={oferta} />
+                            </div>
+                        ))
+                    ) : (
+                        <p className={"text-white font-black text-2xl text-center mt-10"}>No hay ofertas disponibles.</p>
+                    )}
 
                 </div>
             </div>
