@@ -51,7 +51,7 @@ const CandidatosVacante = () => {
                                     <p className={'text-white text-lg font-black'}>{post.nombre}</p>
                                 </div>
 
-                                <div className={'flex flex-col md:flex-row md:items-center gap-10'}>
+                                <div className={'flex flex-col md:flex-row md:items-center gap-10 mb-5'}>
 
                                     <div>
                                         <h2 className={'text-gray-700 font-black text-xl'}>Email</h2>
